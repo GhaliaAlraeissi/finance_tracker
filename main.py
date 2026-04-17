@@ -1,3 +1,4 @@
+# Personal Finance Tracker
 import json
 import matplotlib.pyplot as plt
 
