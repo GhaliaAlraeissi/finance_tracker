@@ -81,7 +81,8 @@ def show_chart():
     plt.show()
 
 # Main menu
-def menu():
+# Handles user menu and input
+    def menu():
     while True:
         print("\n--- Personal Finance Tracker ---")
         print("1. Add Income")
