@@ -23,3 +23,6 @@ How to Run:
 1. Open the project in PyCharm
 2. Run the file main.py
 3. Follow the menu options in the terminal
+
+GitHub Repository:
+https://github.com/GhaliaAlraeissi/finance_tracker
