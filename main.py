@@ -1,4 +1,3 @@
-# Personal Finance Tracker
 import json
 import matplotlib.pyplot as plt
 
@@ -26,28 +25,19 @@ def save_data():
 def add_income():
     try:
         amount = float(input("Enter income amount: "))
-        data["income"].append(amount)
-        save_data()
-        print("Income added!")
-    except:
-        print("Invalid input")
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        return
 
 # Add expense
 def add_expense():
     try:
         amount = float(input("Enter expense amount: "))
-        category = input("Enter category: ")
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        return
 
-        expense = {
-            "amount": amount,
-            "category": category
-        }
-
-        data["expenses"].append(expense)
-        save_data()
-        print("Expense added!")
-    except:
-        print("Invalid input")
+    category = input("Enter category: ")
 
 # View summary
 def view_summary():
@@ -81,8 +71,7 @@ def show_chart():
     plt.show()
 
 # Main menu
-# Handles user menu and input
-    def menu():
+def menu():
     while True:
         print("\n--- Personal Finance Tracker ---")
         print("1. Add Income")
